@@ -14,7 +14,8 @@
       specialArgs = attrs;
       modules = [ 
         ./configuration.nix
-        disko.nixosModules.disko = {
+        disko.nixosModules.disko
+        {
           disko.devices = {
             disk = {
               main = {
@@ -52,8 +53,8 @@
               };
             };
           };
-        };
-      ]
+        }
+      ];
     };
   };
 }
