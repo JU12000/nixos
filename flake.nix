@@ -8,7 +8,7 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, ... }@attrs: {
+  outputs = { self, nixpkgs, disko, ... }@attrs: {
     nixosConfigurations.Tango = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = attrs;
